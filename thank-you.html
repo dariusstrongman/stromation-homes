@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! - Stromation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #28a745;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .checkmark {
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .loading {
+            display: none;
+            margin: 30px 0;
+        }
+
+        .loading.active {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #2563EB;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .next-steps {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .next-steps h2 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .next-steps ol {
+            padding-left: 20px;
+        }
+
+        .next-steps li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .next-steps li strong {
+            color: #2c3e50;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+        }
+
+        .calendly-section {
+            display: none;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #e1e8ed;
+        }
+
+        .calendly-section.active {
+            display: block;
+        }
+
+        .calendly-section h3 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .calendly-section p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid #e1e8ed;
+            color: #999;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #999;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #2563EB;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 25px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Success Icon -->
+        <div class="success-icon">
+            <div class="checkmark">✓</div>
+        </div>
+
+        <!-- Loading State (shown initially) -->
+        <div class="loading active" id="loadingState">
+            <div class="spinner"></div>
+            <div class="loading-text">Processing your information...</div>
+        </div>
+
+        <!-- Success Message (shown after loading) -->
+        <div id="successMessage" style="display: none;">
+            <h1>You're All Set!</h1>
+            <p class="subtitle">
+                Thank you for your interest! We've received your information and are preparing your personalized report.
+            </p>
+
+            <div class="next-steps">
+                <h2>📋 What Happens Next?</h2>
+                <ol>
+                    <li>
+                        <strong>Check Your Email:</strong> We just sent your free home value report to <span id="userEmail">your inbox</span>.
+                    </li>
+                    <li>
+                        <strong>Agent Contact:</strong> A top-rated DFW agent will reach out within <strong>24 hours</strong> via text or call to answer your questions.
+                    </li>
+                    <li>
+                        <strong>No Pressure:</strong> This is a conversation, not a sales pitch. If it's not a good fit, no worries!
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Optional: Calendly Embed Section -->
+            <div class="calendly-section" id="calendlySection">
+                <h3>🚀 Want to Talk Now?</h3>
+                <p>Skip the wait and book a 15-minute call with an agent right now:</p>
+                <a href="#" class="cta-button" id="bookCallButton">Schedule a Call →</a>
+
+                <!-- Calendly inline embed will go here when button is clicked -->
+                <div id="calendlyEmbed" style="margin-top: 20px; display: none;">
+                    <!-- Calendly inline widget will be loaded here via JavaScript -->
+                </div>
+            </div>
+
+            <footer>
+                <p>
+                    Questions? Email us at <a href="mailto:support@stromation.com">support@stromation.com</a>
+                </p>
+                <p style="margin-top: 10px;">
+                    <a href="https://stromation.com">← Back to Stromation</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Get query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const intentType = urlParams.get('intent') || 'real estate';
+        const city = urlParams.get('city') || 'DFW';
+        const email = urlParams.get('email') || 'your inbox';
+
+        // Simulate loading delay
+        setTimeout(() => {
+            // Hide loading state
+            document.getElementById('loadingState').classList.remove('active');
+
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Populate dynamic content
+            if (email !== 'your inbox') {
+                document.getElementById('userEmail').textContent = email;
+            }
+
+            // Show Calendly section after another delay
+            setTimeout(() => {
+                document.getElementById('calendlySection').classList.add('active');
+            }, 2000);
+        }, 3000); // 3-second loading animation
+
+        // Optional: Calendly integration
+        document.getElementById('bookCallButton')?.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Option 1: Open Calendly popup (recommended)
+            if (typeof Calendly !== 'undefined') {
+                Calendly.initPopupWidget({
+                    url: 'https://calendly.com/your-agent/15min'
+                });
+            } else {
+                // Fallback: redirect to Calendly page
+                window.open('https://calendly.com/your-agent/15min', '_blank');
+            }
+
+            // Option 2: Embed inline (alternative)
+            // const embedDiv = document.getElementById('calendlyEmbed');
+            // embedDiv.style.display = 'block';
+            // embedDiv.innerHTML = '<div class="calendly-inline-widget" data-url="https://calendly.com/your-agent/15min" style="min-width:320px;height:630px;"></div>';
+            // const script = document.createElement('script');
+            // script.src = 'https://assets.calendly.com/assets/external/widget.js';
+            // script.async = true;
+            // document.body.appendChild(script);
+        });
+
+        // Track page view for analytics (Google Analytics, etc.)
+        // gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL'});
+    </script>
+
+    <!-- Calendly widget script (if using popup) -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+</body>
+</html>

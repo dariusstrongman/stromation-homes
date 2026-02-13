@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sell your DFW home fast. Get your free home value report in 60 seconds. Connect with top local agents. No obligation, no pushy sales.">
+    <meta name="keywords" content="sell house DFW, DFW real estate, home value DFW Fort Worth, sell home fast">
+
+    <title>Sell Your DFW Home Fast - Free Home Value Report | Stromation</title>
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Sell Your DFW Home Fast - Free Home Value Report">
+    <meta property="og:description" content="Get your free DFW home value report in 60 seconds. Connect with top local agents.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://stromation.com/sell-house-fast-dfw">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .logo span {
+            color: #2563EB;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .subheadline {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 60px 20px;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .info-section h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .info-section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .benefits {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .benefits li {
+            padding: 15px 0;
+            border-bottom: 1px solid #e1e8ed;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .benefits li:before {
+            content: "✓";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #28a745;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-weight: bold;
+        }
+
+        /* Form Section */
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 100px;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-header h3 {
+            font-size: 24px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .typeform-embed {
+            min-height: 600px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item h3 {
+            font-size: 48px;
+            color: #2563EB;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .testimonial-location {
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        footer a:hover {
+            opacity: 1;
+        }
+
+        /* Form Styles */
+        .lead-form { text-align: left; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 14px; font-weight: 600; color: #1E293B; margin-bottom: 5px; }
+        .form-group input, .form-group select {
+            width: 100%; padding: 11px 14px; border: 1px solid #CBD5E1; border-radius: 8px;
+            font-size: 15px; font-family: inherit; background: #F8FAFC; transition: border-color 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none; border-color: #2563EB; box-shadow: 0 0 0 3px rgba(37,99,235,0.1); background: white;
+        }
+        .form-group input::placeholder { color: #94A3B8; }
+        .checkbox-group { display: flex; align-items: flex-start; gap: 10px; margin: 18px 0; }
+        .checkbox-group input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; flex-shrink: 0; accent-color: #2563EB; }
+        .checkbox-group label { font-size: 12px; color: #64748B; line-height: 1.5; font-weight: 400; }
+        .submit-btn {
+            width: 100%; padding: 14px; background: linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%);
+            color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600;
+            cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; font-family: inherit;
+        }
+        .submit-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(37,99,235,0.3); }
+        .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
+        .form-message { padding: 12px; border-radius: 8px; margin-top: 12px; font-size: 14px; display: none; }
+        .form-message.error { background: #FEF2F2; color: #DC2626; border: 1px solid #FEE2E2; display: block; }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero .subheadline {
+                font-size: 18px;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-container {
+                position: static;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span>Stromation</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Sell Your DFW Home Fast</h1>
+            <p class="subheadline">
+                Get your free home value report in 60 seconds. No obligation. No pushy agents. Just honest market insights from local DFW experts.
+            </p>
+
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    ✓ Free Home Value Report
+                </div>
+                <div class="trust-badge">
+                    ✓ Top DFW Agents
+                </div>
+                <div class="trust-badge">
+                    ✓ No Spam Guarantee
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <!-- Left Column: Info -->
+                <div class="info-section">
+                    <h2>Why Sell with a Stromation Agent?</h2>
+                    <p>
+                        The DFW real estate market is hot right now. Don't leave money on the table by going it alone. Our network of top-performing DFW agents will help you:
+                    </p>
+
+                    <ul class="benefits">
+                        <li>
+                            <strong>Get Top Dollar:</strong> Our agents know DFW neighborhoods inside-out and price homes strategically to maximize your profit.
+                        </li>
+                        <li>
+                            <strong>Sell Faster:</strong> Average days on market in DFW is 25-35 days. Our agents often close in 2-3 weeks.
+                        </li>
+                        <li>
+                            <strong>No Headaches:</strong> From staging to showings to closing, we handle everything so you don't have to.
+                        </li>
+                        <li>
+                            <strong>Expert Negotiation:</strong> Our agents negotiate hard to get you the best deal, not just any deal.
+                        </li>
+                        <li>
+                            <strong>Free Service:</strong> Buyer's agents pay our fee, so connecting with us costs you nothing.
+                        </li>
+                    </ul>
+
+                    <p style="margin-top: 30px; padding: 20px; background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 4px;">
+                        <strong>💡 DFW Market Update:</strong> Homes in your area are selling fast! Inventory is tight and buyer demand is high. It's a great time to sell.
+                    </p>
+                </div>
+
+                <!-- Right Column: Form -->
+                <div class="form-container">
+                    <div class="form-header">
+                        <h3>Get Your Free Home Value Report</h3>
+                        <p>Takes 60 seconds. No credit card required.</p>
+                    </div>
+
+                    <form id="leadForm" class="lead-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first_name">First Name *</label>
+                                <input type="text" id="first_name" name="first_name" required placeholder="Your first name">
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" id="last_name" name="last_name" placeholder="Your last name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(214) 555-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="property_address">Property Address</label>
+                            <input type="text" id="property_address" name="property_address" placeholder="123 Main St">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" value="Dallas" placeholder="Dallas">
+                            </div>
+                            <div class="form-group">
+                                <label for="zip_code">ZIP Code</label>
+                                <input type="text" id="zip_code" name="zip_code" placeholder="75201" maxlength="5">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline">When do you want to sell?</label>
+                            <select id="timeline" name="timeline">
+                                <option value="0-30">Within 30 days</option>
+                                <option value="30-90" selected>1-3 months</option>
+                                <option value="90+">3+ months</option>
+                                <option value="exploring">Just exploring</option>
+                            </select>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="price_min">Estimated Value (Low)</label>
+                                <input type="number" id="price_min" name="price_min" placeholder="400000">
+                            </div>
+                            <div class="form-group">
+                                <label for="price_max">Estimated Value (High)</label>
+                                <input type="number" id="price_max" name="price_max" placeholder="500000">
+                            </div>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="sms_opt_in" name="sms_opt_in" value="yes">
+                            <label for="sms_opt_in">I agree to receive text messages about my home sale. Msg &amp; data rates may apply. Reply STOP to opt out.</label>
+                        </div>
+                        <button type="submit" class="submit-btn">Get My Free Home Value Report</button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <h2 style="margin-bottom: 40px;">DFW Real Estate by the Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>$425K</h3>
+                    <p>Median Home Price in DFW</p>
+                </div>
+                <div class="stat-item">
+                    <h3>28</h3>
+                    <p>Average Days on Market</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Of Asking Price (Avg Sale)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What DFW Sellers Are Saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        "I was skeptical at first, but the agent Stromation connected me with was fantastic. Sold my house in 18 days for $15K over asking!"
+                    </p>
+                    <div class="testimonial-author">Jennifer M.</div>
+                    <div class="testimonial-location">Uptown, Dallas</div>
+                </div>
+
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        "The free home value report was spot-on. My agent knew the local market inside and out. Made the whole process stress-free."
+                    </p>
+                    <div class="testimonial-author">Robert T.</div>
+                    <div class="testimonial-location">Lakewood, DFW</div>
+                </div>
+
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        "After trying to sell on my own for 2 months with no luck, I filled out this form. Got connected with an agent, and we had an offer in 10 days."
+                    </p>
+                    <div class="testimonial-author">Maria G.</div>
+                    <div class="testimonial-location">Oak Cliff, DFW</div>
+                </div>
+
+                <div class="testimonial">
+                    <p class="testimonial-text">
+                        "No pressure, no spam. Just a professional agent who listened to what I wanted and delivered. Highly recommend!"
+                    </p>
+                    <div class="testimonial-author">David L.</div>
+                    <div class="testimonial-location">Richardson, DFW</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Stromation. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="https://stromation.com/privacy">Privacy Policy</a> |
+                <a href="https://stromation.com/terms">Terms of Service</a>
+            </p>
+            <p style="margin-top: 20px; font-size: 14px; opacity: 0.7;">
+                Stromation connects home buyers and sellers with licensed real estate agents. We are not a brokerage.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Capture UTM parameters
+        (function() {
+            const params = new URLSearchParams(window.location.search);
+            localStorage.setItem('utm_source', params.get('utm_source') || 'direct');
+            localStorage.setItem('utm_medium', params.get('utm_medium') || 'none');
+            localStorage.setItem('utm_campaign', params.get('utm_campaign') || 'dfw_seller');
+        })();
+
+        // Form submission
+        document.getElementById('leadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('.submit-btn');
+            const msg = document.getElementById('formMessage');
+            const originalText = btn.textContent;
+            btn.disabled = true;
+            btn.textContent = 'Submitting...';
+            msg.className = 'form-message';
+
+            const fd = new FormData(this);
+            const data = Object.fromEntries(fd.entries());
+            data.intent_type = 'seller';
+            data.source = 'landing_page';
+            data.state = 'TX';
+            data.sms_opt_in = fd.has('sms_opt_in') ? 'yes' : 'no';
+            data.utm_source = localStorage.getItem('utm_source') || 'direct';
+            data.utm_medium = localStorage.getItem('utm_medium') || 'none';
+            data.utm_campaign = localStorage.getItem('utm_campaign') || 'dfw_seller';
+            data.page_url = window.location.href;
+
+            try {
+                const resp = await fetch('https://n8n.myaibuffet.com/webhook/lead-capture', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await resp.json();
+                if (result.success) {
+                    window.location.href = 'thank-you.html?email=' + encodeURIComponent(data.email) + '&intent=seller&city=' + encodeURIComponent(data.city || 'DFW');
+                } else {
+                    msg.textContent = result.errors ? result.errors.join(', ') : 'Something went wrong. Please try again.';
+                    msg.className = 'form-message error';
+                    btn.disabled = false;
+                    btn.textContent = originalText;
+                }
+            } catch (err) {
+                msg.textContent = 'Connection error. Please try again.';
+                msg.className = 'form-message error';
+                btn.disabled = false;
+                btn.textContent = originalText;
+            }
+        });
+    </script>
+
+</body>
+</html>
