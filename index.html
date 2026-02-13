@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stromation | DFW Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%);
+            color: #fff;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+        .logo span { color: #93C5FD; }
+        h1 {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 12px;
+        }
+        p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 16px;
+            padding: 36px 24px;
+            text-decoration: none;
+            color: #fff;
+            transition: transform 0.2s, background 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.25);
+        }
+        .card-icon { font-size: 40px; margin-bottom: 16px; }
+        .card h2 { font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+        .card span { font-size: 14px; opacity: 0.85; }
+        @media (max-width: 500px) {
+            .cards { grid-template-columns: 1fr; }
+            h1 { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Stromation<span>.</span></div>
+        <h1>Ready to Make Your Move in DFW?</h1>
+        <p>Connect with a top local agent — no pressure, no fees.</p>
+        <div class="cards">
+            <a href="seller-page.html" class="card">
+                <div class="card-icon">🏡</div>
+                <h2>Selling</h2>
+                <span>Get a free home valuation</span>
+            </a>
+            <a href="buyer-page.html" class="card">
+                <div class="card-icon">🔑</div>
+                <h2>Buying</h2>
+                <span>Find your dream home</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
