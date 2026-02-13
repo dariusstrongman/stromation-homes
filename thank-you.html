@@ -158,28 +158,6 @@
             box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
         }
 
-        .calendly-section {
-            display: none;
-            margin-top: 30px;
-            padding-top: 30px;
-            border-top: 2px solid #e1e8ed;
-        }
-
-        .calendly-section.active {
-            display: block;
-        }
-
-        .calendly-section h3 {
-            font-size: 22px;
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-
-        .calendly-section p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-
         footer {
             margin-top: 40px;
             padding-top: 30px;
@@ -230,34 +208,22 @@
         <div id="successMessage" style="display: none;">
             <h1>You're All Set!</h1>
             <p class="subtitle">
-                Thank you for your interest! We've received your information and are preparing your personalized report.
+                We got your info. Here's what happens next.
             </p>
 
             <div class="next-steps">
-                <h2>📋 What Happens Next?</h2>
+                <h2>📋 Next Steps</h2>
                 <ol>
                     <li>
-                        <strong>Check Your Email:</strong> We just sent your free home value report to <span id="userEmail">your inbox</span>.
+                        <strong>Check your email.</strong> We just sent a confirmation to <span id="userEmail">your inbox</span>.
                     </li>
                     <li>
-                        <strong>Agent Contact:</strong> A top-rated DFW agent will reach out within <strong>24 hours</strong> via text or call to answer your questions.
+                        <strong>Expect a call or text.</strong> A local DFW agent will reach out within <strong>24 hours</strong> to answer any questions.
                     </li>
                     <li>
-                        <strong>No Pressure:</strong> This is a conversation, not a sales pitch. If it's not a good fit, no worries!
+                        <strong>Zero pressure.</strong> If it's not a good fit, just say so. No hard feelings.
                     </li>
                 </ol>
-            </div>
-
-            <!-- Optional: Calendly Embed Section -->
-            <div class="calendly-section" id="calendlySection">
-                <h3>🚀 Want to Talk Now?</h3>
-                <p>Skip the wait and book a 15-minute call with an agent right now:</p>
-                <a href="#" class="cta-button" id="bookCallButton">Schedule a Call →</a>
-
-                <!-- Calendly inline embed will go here when button is clicked -->
-                <div id="calendlyEmbed" style="margin-top: 20px; display: none;">
-                    <!-- Calendly inline widget will be loaded here via JavaScript -->
-                </div>
             </div>
 
             <footer>
@@ -291,43 +257,8 @@
                 document.getElementById('userEmail').textContent = email;
             }
 
-            // Show Calendly section after another delay
-            setTimeout(() => {
-                document.getElementById('calendlySection').classList.add('active');
-            }, 2000);
-        }, 3000); // 3-second loading animation
-
-        // Optional: Calendly integration
-        document.getElementById('bookCallButton')?.addEventListener('click', function(e) {
-            e.preventDefault();
-
-            // Option 1: Open Calendly popup (recommended)
-            if (typeof Calendly !== 'undefined') {
-                Calendly.initPopupWidget({
-                    url: 'https://calendly.com/your-agent/15min'
-                });
-            } else {
-                // Fallback: redirect to Calendly page
-                window.open('https://calendly.com/your-agent/15min', '_blank');
-            }
-
-            // Option 2: Embed inline (alternative)
-            // const embedDiv = document.getElementById('calendlyEmbed');
-            // embedDiv.style.display = 'block';
-            // embedDiv.innerHTML = '<div class="calendly-inline-widget" data-url="https://calendly.com/your-agent/15min" style="min-width:320px;height:630px;"></div>';
-            // const script = document.createElement('script');
-            // script.src = 'https://assets.calendly.com/assets/external/widget.js';
-            // script.async = true;
-            // document.body.appendChild(script);
-        });
-
-        // Track page view for analytics (Google Analytics, etc.)
-        // gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL'});
+        }, 3000);
     </script>
-
-    <!-- Calendly widget script (if using popup) -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
 
 </body>
 </html>
