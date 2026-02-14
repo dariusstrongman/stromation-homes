@@ -5,6 +5,7 @@ User-agent: *
 Allow: /
 Allow: /blog/
 Disallow: /thank-you.html
+Disallow: /thank-you-seller.html
 
 # Block common bot abuse paths
 Disallow: /cgi-bin/
