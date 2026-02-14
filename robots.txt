@@ -1,5 +1,37 @@
+# Stromation Homes - homes.stromation.com
+# Real estate lead generation for DFW Texas
+
 User-agent: *
 Allow: /
+Allow: /blog/
 Disallow: /thank-you.html
 
+# Block common bot abuse paths
+Disallow: /cgi-bin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /.git/
+Disallow: /.env
+
+# Sitemaps
 Sitemap: https://homes.stromation.com/sitemap.xml
+
+# Crawl-delay for less important bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# Allow all major search engines full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
