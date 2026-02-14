@@ -800,7 +800,7 @@
                     var result = await resp.json();
                     if (result.success) {
                         if (typeof fbq === 'function') { fbq('track', 'Lead'); }
-                        window.location.href = 'thank-you.html?email=' + encodeURIComponent(email) + '&intent=seller&city=Allen';
+                        window.location.href = 'thank-you-seller.html?email=' + encodeURIComponent(email) + '&name=' + encodeURIComponent(fullName) + '&city=Allen';
                     } else {
                         err.textContent = result.errors ? result.errors.join(', ') : 'Something went wrong. Please try again.';
                         err.style.display = 'block';
