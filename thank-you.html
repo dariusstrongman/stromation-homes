@@ -217,19 +217,19 @@
 
         <!-- Success Message (shown after loading) -->
         <div id="successMessage" style="display: none;">
-            <h1>You're All Set!</h1>
+            <h1>You're All Set, <span id="userName">there</span>!</h1>
             <p class="subtitle">
-                We got your info. Here's what happens next.
+                Your free home search report is on the way. Here's what you're getting.
             </p>
 
             <div class="next-steps">
-                <h2>📋 Next Steps</h2>
+                <h2>What's Coming</h2>
                 <ol>
                     <li>
-                        <strong>Check your email.</strong> We just sent a confirmation to <span id="userEmail">your inbox</span>.
+                        <strong>Check your email.</strong> We just sent your home search report with market data to <span id="userEmail">your inbox</span>.
                     </li>
                     <li>
-                        <strong>We'll send you an email.</strong> A local DFW agent will reach out within <strong>24 hours</strong> to answer any questions.
+                        <strong>Agent match within 24 hours.</strong> A local buyer's agent will reach out with curated property matches for your budget and preferred area.
                     </li>
                     <li>
                         <strong>Zero pressure.</strong> If it's not a good fit, just say so. No hard feelings.
@@ -276,6 +276,7 @@
         const intentType = urlParams.get('intent') || 'real estate';
         const city = urlParams.get('city') || 'DFW';
         const email = urlParams.get('email') || 'your inbox';
+        const name = urlParams.get('name') || '';
 
         // Simulate loading delay
         setTimeout(() => {
@@ -286,6 +287,9 @@
             document.getElementById('successMessage').style.display = 'block';
 
             // Populate dynamic content
+            if (name) {
+                document.getElementById('userName').textContent = name.split(' ')[0];
+            }
             if (email !== 'your inbox') {
                 document.getElementById('userEmail').textContent = email;
             }
