@@ -168,6 +168,11 @@
             color: #2563EB;
         }
 
+        .nav-links { display: flex; gap: 8px; align-items: center; }
+        .nav-links a { padding: 8px 20px; border-radius: 24px; text-decoration: none; font-size: 15px; font-weight: 500; color: #64748B; transition: all 0.2s; }
+        .nav-links a:hover { color: #2563EB; }
+        .nav-active { background: linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%); color: white !important; }
+
         .breadcrumb {
             max-width: 800px;
             margin: 2rem auto 0;
@@ -552,7 +557,13 @@
 
     <header>
         <div class="header-container">
-            <a href="https://homes.stromation.com" class="logo">Stromation<span>Homes</span></a>
+            <a href="https://homes.stromation.com/" class="logo">Stromation<span>Homes</span></a>
+            <nav class="nav-links">
+                <a href="https://homes.stromation.com/">Home</a>
+                <a href="https://homes.stromation.com/buyer-page.html">Buy</a>
+                <a href="https://homes.stromation.com/seller-page.html">Sell</a>
+                <a href="https://homes.stromation.com/blog/" class="nav-active">Blog</a>
+            </nav>
         </div>
     </header>
 
@@ -912,6 +923,8 @@
             <h3>High Property Taxes</h3>
             <p>Texas property taxes are among the highest in the nation (averaging 1.8-2.5% of home value annually). This significantly impacts prorated taxes at closing and your monthly escrow payments.</p>
 
+            <p>Closing costs can vary by location within DFW. If you're buying or selling in <a href="https://homes.stromation.com/dallas.html" style="color:#2563EB;text-decoration:none;border-bottom:1px solid #93c5fd;">Dallas</a>, <a href="https://homes.stromation.com/plano.html" style="color:#2563EB;text-decoration:none;border-bottom:1px solid #93c5fd;">Plano</a>, <a href="https://homes.stromation.com/fort-worth.html" style="color:#2563EB;text-decoration:none;border-bottom:1px solid #93c5fd;">Fort Worth</a>, or <a href="https://homes.stromation.com/frisco.html" style="color:#2563EB;text-decoration:none;border-bottom:1px solid #93c5fd;">Frisco</a>, connect with a local agent who can give you an accurate estimate for your specific area. Property tax rates, title fees, and typical negotiation leverage all vary by city and neighborhood.</p>
+
             <section class="faq-section">
                 <h2>Frequently Asked Questions</h2>
 
@@ -1011,6 +1024,7 @@
                     <li><a href="https://homes.stromation.com/plano.html">Plano</a></li>
                     <li><a href="https://homes.stromation.com/frisco.html">Frisco</a></li>
                     <li><a href="https://homes.stromation.com/mckinney.html">McKinney</a></li>
+                    <li><a href="https://homes.stromation.com/arlington.html">Arlington</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -1019,6 +1033,8 @@
                     <li><a href="https://homes.stromation.com/buyer-page.html">Home Buyers</a></li>
                     <li><a href="https://homes.stromation.com/seller-page.html">Home Sellers</a></li>
                     <li><a href="https://homes.stromation.com/blog/">Blog</a></li>
+                    <li><a href="https://stromation.com/privacy">Privacy Policy</a></li>
+                    <li><a href="https://stromation.com/terms">Terms of Service</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -1028,6 +1044,7 @@
                     <li><a href="how-to-sell-house-fast-dallas.html">Sell Your House Fast</a></li>
                     <li><a href="best-neighborhoods-dfw-families.html">Best Family Neighborhoods</a></li>
                     <li><a href="dfw-housing-market-2026.html">Market Forecast 2026</a></li>
+                    <li><a href="closing-costs-texas-explained.html">Closing Costs Explained</a></li>
                 </ul>
             </div>
         </div>
