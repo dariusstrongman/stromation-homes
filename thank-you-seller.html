@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We Got Your Info | Stromation Homes</title>
     <meta name="robots" content="noindex, nofollow">
@@ -190,7 +191,7 @@
 
         <!-- Success state (hidden initially) -->
         <div id="successState" style="display:none;">
-            <h1>We're On It, <span id="userName">there</span>!</h1>
+            <h1>We're On It<span id="userName"></span>!</h1>
             <p class="subtitle">Your free <span id="cityName">home</span> evaluation is on the way. Here's what you're getting.</p>
 
             <div class="steps">
@@ -236,7 +237,7 @@
                 </div>
             </div>
 
-            <p class="footer-text">&copy; 2026 Stromation Homes. Questions? Email homes@stromation.com</p>
+            <p class="footer-text">&copy; 2026 Stromation Homes. Questions? Email team@stromation.com</p>
         </div>
     </div>
 
@@ -251,7 +252,7 @@
             document.getElementById('successState').style.display = 'block';
 
             if (name) {
-                document.getElementById('userName').textContent = name.split(' ')[0];
+                document.getElementById('userName').textContent = ', ' + name.split(' ')[0];
             }
             if (city) {
                 document.getElementById('cityName').textContent = city;

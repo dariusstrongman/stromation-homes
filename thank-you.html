@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Thank you for contacting Stromation Homes. A top DFW real estate agent will reach out within 24 hours.">
     <meta name="robots" content="noindex, nofollow">
@@ -198,6 +199,8 @@
             <a href="https://homes.stromation.com/" style="font-size:24px;font-weight:700;color:#2c3e50;text-decoration:none;">Stromation<span style="color:#2563EB;">.</span></a>
             <div style="display:flex;gap:8px;align-items:center;">
                 <a href="https://homes.stromation.com/" style="padding:8px 20px;border-radius:24px;text-decoration:none;font-size:15px;font-weight:500;color:#64748B;">Home</a>
+                <a href="https://homes.stromation.com/buyer-page.html" style="padding:8px 20px;border-radius:24px;text-decoration:none;font-size:15px;font-weight:500;color:#64748b;">Buy</a>
+                <a href="https://homes.stromation.com/seller-page.html" style="padding:8px 20px;border-radius:24px;text-decoration:none;font-size:15px;font-weight:500;color:#64748b;">Sell</a>
                 <a href="https://homes.stromation.com/blog/" style="padding:8px 20px;border-radius:24px;text-decoration:none;font-size:15px;font-weight:500;color:#64748B;">Blog</a>
             </div>
         </div>
@@ -217,7 +220,7 @@
 
         <!-- Success Message (shown after loading) -->
         <div id="successMessage" style="display: none;">
-            <h1>You're All Set, <span id="userName">there</span>!</h1>
+            <h1>You're All Set<span id="userName"></span>!</h1>
             <p class="subtitle">
                 Your free home search report is on the way. Here's what you're getting.
             </p>
@@ -261,7 +264,7 @@
 
             <footer>
                 <p>
-                    Questions? Email us at <a href="mailto:questions@stromation.com">questions@stromation.com</a>
+                    Questions? Email us at <a href="mailto:team@stromation.com">team@stromation.com</a>
                 </p>
                 <p style="margin-top: 10px;">
                     <a href="https://homes.stromation.com">← Back to Stromation Homes</a>
@@ -288,7 +291,7 @@
 
             // Populate dynamic content
             if (name) {
-                document.getElementById('userName').textContent = name.split(' ')[0];
+                document.getElementById('userName').textContent = ', ' + name.split(' ')[0];
             }
             if (email !== 'your inbox') {
                 document.getElementById('userEmail').textContent = email;
