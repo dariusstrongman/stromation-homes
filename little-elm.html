@@ -986,7 +986,7 @@
                     <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/buyer-page.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Buy a Home</a></li>
                     <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/seller-page.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Sell Your Home</a></li>
                     <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/blog/" style="color:#94a3b8;text-decoration:none;font-size:14px;">Blog</a></li>
-                    <li style="margin-bottom:8px;"><a href="https://stromation.com/privacy" style="color:#94a3b8;text-decoration:none;font-size:14px;">Privacy Policy</a></li>
+                    <li style="margin-bottom:8px;"><a href="privacy.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Privacy Policy</a></li>
                     <li style="margin-bottom:8px;"><a href="https://stromation.com/terms" style="color:#94a3b8;text-decoration:none;font-size:14px;">Terms of Service</a></li>
                 </ul>
             </div>
@@ -1074,6 +1074,13 @@
             data.utm_medium = localStorage.getItem('utm_medium') || 'none';
             data.utm_campaign = localStorage.getItem('utm_campaign') || 'little_elm_real_estate';
             data.page_url = window.location.href;
+
+            // GA4 form submission tracking
+            gtag('event', 'generate_lead', {
+                'event_category': 'form',
+                'event_label': currentIntent + '_form',
+                'value': 1
+            });
 
             try {
                 var resp = await fetch('https://n8n.myaibuffet.com/webhook/lead-capture', {

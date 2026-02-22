@@ -795,6 +795,13 @@
                     page_url: window.location.href
                 };
 
+                // GA4 form submission tracking
+                gtag('event', 'generate_lead', {
+                    'event_category': 'form',
+                    'event_label': 'seller_form',
+                    'value': 1
+                });
+
                 try {
                     var resp = await fetch('https://n8n.myaibuffet.com/webhook/lead-capture', {
                         method: 'POST',
