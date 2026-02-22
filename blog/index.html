@@ -180,7 +180,7 @@
         }
 
         .featured-visual {
-            background: linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%);
+            background: linear-gradient(135deg, rgba(37,99,235,0.7) 0%, rgba(14,165,233,0.7) 100%), url('../images/blog-first-time-buyer.jpg') center/cover no-repeat;
             padding: 48px;
             display: flex;
             flex-direction: column;
@@ -272,13 +272,24 @@
             background: white;
             border: 1px solid #e2e8f0;
             border-radius: 16px;
-            padding: 32px;
+            overflow: hidden;
             text-decoration: none;
             color: #2c3e50;
             transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
             box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+        }
+        .article-card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .article-card-body {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
 
         .article-card:hover {
@@ -546,6 +557,8 @@
         <h3>More Articles</h3>
         <div class="article-grid">
             <a href="how-to-sell-house-fast-dallas.html" class="article-card">
+                <img src="../images/blog-sell-fast.jpg" alt="Staged home interior ready for sale in Dallas-Fort Worth" class="article-card-img" loading="lazy">
+                <div class="article-card-body">
                 <span class="article-tag tag-sellers">Sellers</span>
                 <h4>How to Sell Your House Fast in Dallas-Fort Worth</h4>
                 <p>Pricing strategy, high-ROI improvements, staging tips, and how to handle multiple offers in today's market.</p>
@@ -553,9 +566,12 @@
                     <span>10 min read</span>
                     <span class="arrow">&rarr;</span>
                 </div>
+                </div>
             </a>
 
             <a href="best-neighborhoods-dfw-families.html" class="article-card">
+                <img src="../images/blog-neighborhoods.jpg" alt="Family-friendly neighborhood street in DFW suburbs" class="article-card-img" loading="lazy">
+                <div class="article-card-body">
                 <span class="article-tag tag-neighborhoods">Neighborhoods</span>
                 <h4>Best DFW Neighborhoods for Families in 2026</h4>
                 <p>School ratings, safety, parks, and home prices across Frisco, Plano, Southlake, McKinney, and more.</p>
@@ -563,9 +579,12 @@
                     <span>11 min read</span>
                     <span class="arrow">&rarr;</span>
                 </div>
+                </div>
             </a>
 
             <a href="dfw-housing-market-2026.html" class="article-card">
+                <img src="../images/blog-market.jpg" alt="Dallas skyline representing the 2026 DFW housing market" class="article-card-img" loading="lazy">
+                <div class="article-card-body">
                 <span class="article-tag tag-market">Market</span>
                 <h4>DFW Housing Market Forecast 2026</h4>
                 <p>Price trends, inventory levels, interest rates, and which neighborhoods are heating up this year.</p>
@@ -573,9 +592,12 @@
                     <span>10 min read</span>
                     <span class="arrow">&rarr;</span>
                 </div>
+                </div>
             </a>
 
             <a href="closing-costs-texas-explained.html" class="article-card">
+                <img src="../images/blog-closing-costs.jpg" alt="Understanding closing costs when buying or selling in Texas" class="article-card-img" loading="lazy">
+                <div class="article-card-body">
                 <span class="article-tag tag-finance">Finance</span>
                 <h4>Understanding Closing Costs in Texas</h4>
                 <p>What buyers and sellers actually pay, who covers what, and real strategies to reduce your costs at closing.</p>
@@ -583,9 +605,12 @@
                     <span>9 min read</span>
                     <span class="arrow">&rarr;</span>
                 </div>
+                </div>
             </a>
 
             <a href="how-much-house-can-i-afford-dfw.html" class="article-card">
+                <img src="../images/blog-affordability.jpg" alt="Budgeting and affordability planning for DFW homes" class="article-card-img" loading="lazy">
+                <div class="article-card-body">
                 <span class="article-tag tag-finance">Finance</span>
                 <h4>How Much House Can I Afford in DFW? (2026 Calculator Guide)</h4>
                 <p>Salary-to-home-price ratios, the 28/36 rule, and what $60K-$120K salaries can buy in the DFW market.</p>
@@ -593,9 +618,12 @@
                     <span>10 min read</span>
                     <span class="arrow">&rarr;</span>
                 </div>
+                </div>
             </a>
 
             <a href="best-school-districts-dfw.html" class="article-card">
+                <img src="../images/blog-schools.jpg" alt="Top-rated school building in the Dallas-Fort Worth area" class="article-card-img" loading="lazy">
+                <div class="article-card-body">
                 <span class="article-tag tag-neighborhoods">Neighborhoods</span>
                 <h4>Best School Districts in DFW for Families (2026 Rankings)</h4>
                 <p>Top 10 school districts ranked with ratings, median home prices, and what makes each one special.</p>
@@ -603,9 +631,12 @@
                     <span>11 min read</span>
                     <span class="arrow">&rarr;</span>
                 </div>
+                </div>
             </a>
 
             <a href="renting-vs-buying-dfw.html" class="article-card">
+                <img src="../images/blog-rent-vs-buy.jpg" alt="Comparing renting versus buying a home in DFW" class="article-card-img" loading="lazy">
+                <div class="article-card-body">
                 <span class="article-tag tag-finance">Finance</span>
                 <h4>Renting vs. Buying in DFW: What Actually Makes Sense in 2026</h4>
                 <p>Real numbers, breakeven analysis, and when each option wins in the Dallas-Fort Worth market.</p>
@@ -613,9 +644,12 @@
                     <span>10 min read</span>
                     <span class="arrow">&rarr;</span>
                 </div>
+                </div>
             </a>
 
             <a href="texas-homebuyer-programs-2026.html" class="article-card">
+                <img src="../images/blog-texas-programs.jpg" alt="Texas homebuyer assistance programs for 2026" class="article-card-img" loading="lazy">
+                <div class="article-card-body">
                 <span class="article-tag tag-finance">Finance</span>
                 <h4>Every First-Time Homebuyer Program in Texas (2026)</h4>
                 <p>My First Texas Home, TSAHC, FHA, VA, USDA, and city-specific down payment assistance programs.</p>
@@ -623,9 +657,12 @@
                     <span>11 min read</span>
                     <span class="arrow">&rarr;</span>
                 </div>
+                </div>
             </a>
 
             <a href="property-tax-rates-dfw-comparison.html" class="article-card">
+                <img src="../images/blog-property-tax.jpg" alt="Property tax rates comparison across DFW cities" class="article-card-img" loading="lazy">
+                <div class="article-card-body">
                 <span class="article-tag tag-finance">Finance</span>
                 <h4>DFW Property Tax Rates Compared: Every City Side by Side</h4>
                 <p>Tax rates for 20+ DFW cities, what they cost in real dollars, homestead exemptions, and protest tips.</p>
@@ -633,9 +670,12 @@
                     <span>10 min read</span>
                     <span class="arrow">&rarr;</span>
                 </div>
+                </div>
             </a>
 
             <a href="moving-to-dfw-relocation-guide.html" class="article-card">
+                <img src="../images/blog-moving.jpg" alt="Relocating to the Dallas-Fort Worth metroplex" class="article-card-img" loading="lazy">
+                <div class="article-card-body">
                 <span class="article-tag tag-neighborhoods">Neighborhoods</span>
                 <h4>Moving to Dallas-Fort Worth: The Complete 2026 Relocation Guide</h4>
                 <p>Jobs, cost of living, best cities for your lifestyle, commute times, and what newcomers don't expect.</p>
@@ -643,9 +683,12 @@
                     <span>12 min read</span>
                     <span class="arrow">&rarr;</span>
                 </div>
+                </div>
             </a>
 
             <a href="no-money-down-homes-texas.html" class="article-card">
+                <img src="../images/blog-no-money-down.jpg" alt="Zero down payment home buying options in Texas" class="article-card-img" loading="lazy">
+                <div class="article-card-body">
                 <span class="article-tag tag-finance">Finance</span>
                 <h4>How to Buy a House With No Money Down in Texas</h4>
                 <p>VA loans, USDA loans, down payment assistance, seller concessions, and realistic expectations.</p>
@@ -653,15 +696,19 @@
                     <span>10 min read</span>
                     <span class="arrow">&rarr;</span>
                 </div>
+                </div>
             </a>
 
             <a href="home-inspection-checklist-texas.html" class="article-card">
+                <img src="../images/blog-inspection.jpg" alt="Home inspection checklist for Texas buyers" class="article-card-img" loading="lazy">
+                <div class="article-card-body">
                 <span class="article-tag tag-sellers">Sellers</span>
                 <h4>The Texas Home Inspection Checklist: What to Look For</h4>
                 <p>Foundation, roof, HVAC, Texas-specific issues, the option period, and when to walk away.</p>
                 <div class="meta">
                     <span>11 min read</span>
                     <span class="arrow">&rarr;</span>
+                </div>
                 </div>
             </a>
         </div>

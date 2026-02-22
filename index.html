@@ -82,7 +82,7 @@
         .nav-links .active{background:linear-gradient(135deg,#2563eb,#0ea5e9);color:#fff!important}
 
         /* Hero */
-        .hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 50%,#0f172a 100%);color:#fff;padding:80px 20px 70px;text-align:center;position:relative;overflow:hidden}
+        .hero{background:linear-gradient(135deg,rgba(15,23,42,0.85) 0%,rgba(30,58,95,0.8) 50%,rgba(15,23,42,0.85) 100%),url('images/hero-home.jpg') center/cover no-repeat;color:#fff;padding:80px 20px 70px;text-align:center;position:relative;overflow:hidden}
         .hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 20%,rgba(37,99,235,0.15) 0%,transparent 60%),radial-gradient(ellipse at 70% 80%,rgba(14,165,233,0.1) 0%,transparent 60%);pointer-events:none}
         .hero-inner{max-width:700px;margin:0 auto;position:relative;z-index:1}
         .hero-badge{display:inline-block;background:rgba(37,99,235,0.2);border:1px solid rgba(37,99,235,0.4);color:#93c5fd;font-size:12px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:24px}
@@ -132,8 +132,10 @@
         /* Blog */
         .blog-section{padding:70px 20px;background:#fff}
         .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1000px;margin:0 auto 30px}
-        .blog-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:24px;text-decoration:none;color:#1e293b;transition:all 0.2s;display:flex;flex-direction:column}
+        .blog-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;text-decoration:none;color:#1e293b;transition:all 0.2s;display:flex;flex-direction:column}
         .blog-card:hover{transform:translateY(-4px);box-shadow:0 8px 24px rgba(37,99,235,0.08);border-color:#cbd5e1}
+        .blog-card-img{width:100%;height:160px;object-fit:cover}
+        .blog-card-body{padding:24px}
         .blog-card .tag{display:inline-block;padding:3px 10px;border-radius:5px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px;width:fit-content}
         .tag-buy{background:#eff6ff;color:#2563eb}
         .tag-sell{background:#fff7ed;color:#ea580c}
@@ -340,40 +342,58 @@
             <h2 class="section-title">Honest advice for DFW homeowners</h2>
             <div class="blog-grid">
                 <a href="blog/first-time-homebuyer-guide-dfw.html" class="blog-card">
+                    <img src="images/blog-first-time-buyer.jpg" alt="First-time home buyer receiving keys to new DFW home" class="blog-card-img" loading="lazy">
+                    <div class="blog-card-body">
                     <span class="tag tag-buy">Buyers</span>
                     <h3>First-Time Home Buyer's Guide to DFW</h3>
                     <p>Pre-approval, down payment programs, and what to expect at closing.</p>
                     <span class="read">Read article &rarr;</span>
+                    </div>
                 </a>
                 <a href="blog/how-to-sell-house-fast-dallas.html" class="blog-card">
+                    <img src="images/blog-sell-fast.jpg" alt="Beautifully staged home interior ready for sale in Dallas" class="blog-card-img" loading="lazy">
+                    <div class="blog-card-body">
                     <span class="tag tag-sell">Sellers</span>
                     <h3>How to Sell Your House Fast in DFW</h3>
                     <p>Pricing strategy, staging tips, and how to handle multiple offers.</p>
                     <span class="read">Read article &rarr;</span>
+                    </div>
                 </a>
                 <a href="blog/best-neighborhoods-dfw-families.html" class="blog-card">
+                    <img src="images/blog-neighborhoods.jpg" alt="Family-friendly neighborhood with tree-lined streets in DFW" class="blog-card-img" loading="lazy">
+                    <div class="blog-card-body">
                     <span class="tag tag-area">Neighborhoods</span>
                     <h3>Best DFW Neighborhoods for Families</h3>
                     <p>School ratings, safety, parks, and home prices across top cities.</p>
                     <span class="read">Read article &rarr;</span>
+                    </div>
                 </a>
                 <a href="blog/how-much-house-can-i-afford-dfw.html" class="blog-card">
+                    <img src="images/blog-affordability.jpg" alt="Home affordability planning and budgeting in Dallas-Fort Worth" class="blog-card-img" loading="lazy">
+                    <div class="blog-card-body">
                     <span class="tag tag-money">Finance</span>
                     <h3>How Much House Can I Afford in DFW?</h3>
                     <p>Salary breakdowns, the 28/36 rule, and real DFW cost estimates.</p>
                     <span class="read">Read article &rarr;</span>
+                    </div>
                 </a>
                 <a href="blog/dfw-housing-market-2026.html" class="blog-card">
+                    <img src="images/blog-market.jpg" alt="Dallas-Fort Worth skyline representing the 2026 housing market" class="blog-card-img" loading="lazy">
+                    <div class="blog-card-body">
                     <span class="tag tag-area">Market</span>
                     <h3>DFW Housing Market Forecast 2026</h3>
                     <p>Where prices are headed and what it means for buyers and sellers.</p>
                     <span class="read">Read article &rarr;</span>
+                    </div>
                 </a>
                 <a href="blog/closing-costs-texas-explained.html" class="blog-card">
+                    <img src="images/blog-closing-costs.jpg" alt="Understanding closing costs when buying or selling a home in Texas" class="blog-card-img" loading="lazy">
+                    <div class="blog-card-body">
                     <span class="tag tag-money">Finance</span>
                     <h3>Closing Costs in Texas Explained</h3>
                     <p>What to expect, who pays what, and how to reduce your costs.</p>
                     <span class="read">Read article &rarr;</span>
+                    </div>
                 </a>
             </div>
             <div class="view-all">
