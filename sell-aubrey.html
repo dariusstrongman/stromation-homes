@@ -454,9 +454,34 @@
             .trust-grid { grid-template-columns: 1fr; }
             .market-stats { grid-template-columns: 1fr; }
         }
+    
+        .hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.hamburger span{display:block;width:24px;height:2px;background:#2c3e50;margin:5px 0;transition:all 0.3s}
+@media(max-width:768px){
+    .hamburger{display:block}
+    .nav-links-mobile{display:none!important;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;padding:16px 24px;box-shadow:0 4px 12px rgba(0,0,0,0.1);gap:0!important}
+    .nav-links-mobile.open{display:flex!important}
+    .nav-links-mobile a{padding:12px 0!important;border-bottom:1px solid #f1f5f9;border-radius:0!important}
+    .nav-links-mobile a:last-child{border-bottom:none}
+}
     </style>
 </head>
 <body>
+
+    <!-- Nav -->
+    <nav style="background:#fff;padding:15px 0;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:1000;">
+        <div style="max-width:1200px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;position:relative;">
+            <a href="https://homes.stromation.com/" style="font-size:24px;font-weight:700;color:#2c3e50;text-decoration:none;">Stromation<span style="color:#2563eb;">.</span></a>
+            <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button>
+            <div class="nav-links-mobile" style="display:flex;gap:8px;align-items:center;">
+                <a href="https://homes.stromation.com/" style="padding:8px 20px;border-radius:24px;text-decoration:none;font-size:15px;font-weight:500;color:#64748b;">Home</a>
+                <a href="https://homes.stromation.com/buyer-page.html" style="padding:8px 20px;border-radius:24px;text-decoration:none;font-size:15px;font-weight:500;color:#64748b;">Buy</a>
+                <a href="https://homes.stromation.com/seller-page.html" style="padding:8px 20px;border-radius:24px;text-decoration:none;font-size:15px;font-weight:500;color:#64748b;">Sell</a>
+                <a href="https://homes.stromation.com/blog/" style="padding:8px 20px;border-radius:24px;text-decoration:none;font-size:15px;font-weight:500;color:#64748b;">Blog</a>
+            </div>
+        </div>
+    </nav>
+
 
     <!-- ═══ HERO ═══ -->
     <section class="hero">
@@ -686,8 +711,47 @@
     </section>
 
     <!-- ═══ FOOTER ═══ -->
-    <footer class="mini-footer">
-        &copy; 2026 Stromation Homes. All rights reserved. Market data updated weekly.
+    <footer style="background:#0f172a;color:#e2e8f0;padding:60px 20px 30px;">
+        <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;">
+            <div>
+                <h3 style="color:#fff;font-size:16px;margin-bottom:16px;">Stromation Homes</h3>
+                <p style="font-size:14px;line-height:1.7;color:#94a3b8;">Your trusted partner for buying and selling homes in the Dallas-Fort Worth metroplex. Free agent matching, no obligation.</p>
+            </div>
+            <div>
+                <h3 style="color:#fff;font-size:16px;margin-bottom:16px;">Popular Cities</h3>
+                <ul style="list-style:none;padding:0;">
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/dallas.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Dallas</a></li>
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/fort-worth.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Fort Worth</a></li>
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/plano.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Plano</a></li>
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/frisco.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Frisco</a></li>
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/mckinney.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">McKinney</a></li>
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/arlington.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Arlington</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color:#fff;font-size:16px;margin-bottom:16px;">Resources</h3>
+                <ul style="list-style:none;padding:0;">
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/buyer-page.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Buy a Home</a></li>
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/seller-page.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Sell Your Home</a></li>
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/blog/" style="color:#94a3b8;text-decoration:none;font-size:14px;">Blog</a></li>
+                    <li style="margin-bottom:8px;"><a href="privacy.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Privacy Policy</a></li>
+                    <li style="margin-bottom:8px;"><a href="https://stromation.com/terms" style="color:#94a3b8;text-decoration:none;font-size:14px;">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="color:#fff;font-size:16px;margin-bottom:16px;">Latest Articles</h3>
+                <ul style="list-style:none;padding:0;">
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/blog/first-time-homebuyer-guide-dfw.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">First-Time Buyer&#39;s Guide</a></li>
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/blog/how-to-sell-house-fast-dallas.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Sell Your House Fast</a></li>
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/blog/best-neighborhoods-dfw-families.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Best Family Neighborhoods</a></li>
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/blog/dfw-housing-market-2026.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Market Forecast 2026</a></li>
+                    <li style="margin-bottom:8px;"><a href="https://homes.stromation.com/blog/closing-costs-texas-explained.html" style="color:#94a3b8;text-decoration:none;font-size:14px;">Closing Costs Explained</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="max-width:1200px;margin:40px auto 0;padding-top:20px;border-top:1px solid #1e293b;text-align:center;font-size:13px;color:#64748b;">
+            <p>&copy; 2026 Stromation Homes. All rights reserved. Stromation connects buyers and sellers with licensed real estate agents. We are not a brokerage.</p>
+        </div>
     </footer>
 
     <script>
