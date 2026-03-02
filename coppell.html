@@ -1095,22 +1095,42 @@
             data.utm_campaign = localStorage.getItem('utm_campaign') || 'coppell_real_estate';
             data.page_url = window.location.href;
 
-            // GA4 form submission tracking
-            gtag('event', 'generate_lead', {
-                'event_category': 'form',
-                'event_label': currentIntent + '_form',
-                'value': 1
-            });
+
+            if (data.phone && !/^[\d\s\(\)\-\+\.]{7,}$/.test(data.phone)) {
+                msg.textContent = 'Please enter a valid phone number.';
+                msg.className = 'form-message error';
+                btn.disabled = false;
+                btn.textContent = originalText;
+                return;
+            }
+
+            if (data.zip_code && !/^\d{5}$/.test(data.zip_code)) {
+                msg.textContent = 'Please enter a valid 5-digit ZIP code.';
+                msg.className = 'form-message error';
+                btn.disabled = false;
+                btn.textContent = originalText;
+                return;
+            }
 
             try {
+                var controller = new AbortController();
+                var timeoutId = setTimeout(function() { controller.abort(); }, 10000);
                 var resp = await fetch('https://n8n.myaibuffet.com/webhook/lead-capture', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
+                    body: JSON.stringify(data),
+                    signal: controller.signal
                 });
+                clearTimeout(timeoutId);
                 var result = await resp.json();
                 if (result.success) {
-                    window.location.href = 'thank-you.html?email=' + encodeURIComponent(data.email) + '&intent=' + currentIntent + '&city=' + encodeURIComponent(data.city || 'Coppell');
+                    // GA4 form submission tracking
+                    gtag('event', 'generate_lead', {
+                        'event_category': 'form',
+                        'event_label': currentIntent + '_form',
+                        'value': 1
+                    });
+                    window.location.href = 'thank-you.html?intent=' + currentIntent + '&city=' + encodeURIComponent(data.city || 'Coppell');
                 } else {
                     msg.textContent = result.errors ? result.errors.join(', ') : 'Something went wrong. Please try again.';
                     msg.className = 'form-message error';

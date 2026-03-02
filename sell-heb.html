@@ -850,23 +850,34 @@
                     page_url: window.location.href
                 };
 
-                // GA4 form submission tracking
-                gtag('event', 'generate_lead', {
-                    'event_category': 'form',
-                    'event_label': 'seller_form',
-                    'value': 1
-                });
+                if (phone && !/^[\d\s\(\)\-\+\.]{7,}$/.test(phone)) {
+                    err.textContent = 'Please enter a valid phone number.';
+                    err.style.display = 'block';
+                    btn.disabled = false;
+                    btn.textContent = original;
+                    return;
+                }
 
                 try {
+                    var controller = new AbortController();
+                    var timeoutId = setTimeout(function() { controller.abort(); }, 10000);
                     var resp = await fetch('https://n8n.myaibuffet.com/webhook/lead-capture', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(data)
+                        body: JSON.stringify(data),
+                        signal: controller.signal
                     });
+                    clearTimeout(timeoutId);
                     var result = await resp.json();
                     if (result.success) {
+                        // GA4 form submission tracking
+                        gtag('event', 'generate_lead', {
+                            'event_category': 'form',
+                            'event_label': 'seller_form',
+                            'value': 1
+                        });
                         if (typeof fbq === 'function') { fbq('track', 'Lead'); }
-                        window.location.href = 'thank-you-seller.html?email=' + encodeURIComponent(email) + '&name=' + encodeURIComponent(fullName) + '&city=Hurst,%20Euless%20&%20Bedford';
+                        window.location.href = 'thank-you-seller.html?name=' + encodeURIComponent(fullName) + '&city=Hurst,%20Euless%20&%20Bedford';
                     } else {
                         err.textContent = result.errors ? result.errors.join(', ') : 'Something went wrong. Please try again.';
                         err.style.display = 'block';
